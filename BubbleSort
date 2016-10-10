@@ -1,0 +1,35 @@
+public class BubbleSort {
+		public static void main(String[] args) {
+			int array[]={9,2,3,6,8,4,43,11,44,42,21,7};
+			//第一种冒泡排序方法
+//			for(int j=0;j<array.length-1;j++){
+//				for(int i=0;i<array.length-1-j;i++){
+//					if(array[i]>array[i+1]){
+//						int temp=array[i+1];
+//						array[i+1]=array[i];
+//						array[i]=temp;
+//					}
+//				}
+//			}
+			for(int j=array.length-1;j>1;j--){
+				for(int i=0;i<j;i++){
+					if(array[i]>array[i+1]){
+						int temp=array[i];
+						array[i]=array[i+1];
+						array[i+1]=temp;
+					}
+				}
+			}
+			
+			for(int j=0;j<array.length;j++){
+				System.out.print(array[j]+"  ");
+			}
+			System.out.println();
+		}
+		public void swap(int array1,int array2){
+			int temp=array1;
+			array1=array2;
+			array2=temp;
+			
+		}
+}
